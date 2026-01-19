@@ -1,48 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>heart ❤️❤️❤️</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<!DOCTYPE html>
-
-<html>
-
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <title>Neon Heart Animation</title>
 
-    <title>heart aanimation</title>
+    <!-- Import map for three.js modules -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
 
-    <meta name="Generator" content="EditPlus" />
-
-    <meta name="Author" content="" />
-
-    <meta name="Keywords" content="" />
-
-    <meta name="Description" content="" />
-
-    <link rel="stylesheet" href="styles.css" />
-
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <div id="container"></div>
+    <div class="glow"></div>
+    <div id="controls"></div>
 
-    <div class="box">
-
-      <canvas id="pinkboard"></canvas> 
-
-    </div>
-
-    <script src="script.js"></script>
-
+    <script type="module" src="script.js"></script>
   </body>
-
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
-</body>
 </html>
