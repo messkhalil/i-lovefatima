@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Neon Heart Animation</title>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فاطمة | Nano RGB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <!-- Import map for three.js modules -->
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
-        }
-      }
-    </script>
+    <div class="nano-container">
+        <!-- مسار القلب المختار -->
+        <svg viewBox="0 0 100 100" class="nano-svg">
+            <path id="nano-path" d="M50 88.9C25.5 74.2 8.5 56.5 8.5 35.5C8.5 22.8 18.2 12.5 31.5 12.5C39.2 12.5 45.9 16.1 50 21.6C54.1 16.1 60.8 12.5 68.5 12.5C81.8 12.5 91.5 22.8 91.5 35.5C91.5 56.5 74.5 74.2 50 88.9Z"></path>
+        </svg>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+        <!-- الاسم الذي سيصبح RGB -->
+        <h1 class="name">Fatima</h1>
+    </div>
 
-  <body>
-    <div id="container"></div>
-    <div class="glow"></div>
-    <div id="controls"></div>
+    <canvas id="starsCanvas"></canvas>
 
-    <script type="module" src="script.js"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
