@@ -1,7 +1,8 @@
+/* إعدادات الخلفية الفضائية */
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background: radial-gradient(circle at center, #0a0a2a 0%, #000000 100%);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -10,78 +11,101 @@ body {
     font-family: 'Arial', sans-serif;
 }
 
-.nano-container {
+/* القمر المضيء */
+.moon {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    width: 80px;
+    height: 80px;
+    background: #fefcd7;
+    border-radius: 50%;
+    box-shadow: 0 0 40px #fefcd7, 0 0 80px rgba(254, 252, 215, 0.3);
+    z-index: 1;
+}
+
+/* النجوم اللماعة */
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 10px white; }
+}
+
+/* حاوية القلب والاسم */
+.main-scene {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 380px;
+    height: 380px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
-    animation: pulse 2s infinite ease-in-out;
+    animation: floating 3s infinite ease-in-out;
 }
 
-.nano-svg {
+/* أنيميشن رسم القلب والـ RGB */
+.nano-heart-svg {
     width: 100%;
     height: 100%;
-}
-
-#nano-path {
-    fill: none;
-    stroke: #ff0000;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    animation: 
-        drawHeart 3s ease-in-out forwards,
-        rgbFlow 6s linear infinite;
-}
-
-/* تعديل الاسم ليصبح RGB */
-.name {
     position: absolute;
-    font-size: 4rem;
-    margin: 0;
-    opacity: 0;
-    /* أنيميشن الظهور + أنيميشن الألوان */
-    animation: 
-        fadeIn 2s ease-out forwards 2s,
-        rgbText 6s linear infinite;
-    user-select: none;
 }
 
-/* أنيميشن ألوان الاسم (RGB) */
-@keyframes rgbText {
-    0% { color: #ff0000; text-shadow: 0 0 15px #ff0000; }
-    33% { color: #00ff00; text-shadow: 0 0 15px #00ff00; }
-    66% { color: #0000ff; text-shadow: 0 0 15px #0000ff; }
-    100% { color: #ff0000; text-shadow: 0 0 15px #ff0000; }
+#path-heart {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    animation: rgbStroke 6s linear infinite;
 }
 
-@keyframes drawHeart {
-    from { stroke-dasharray: 400; stroke-dashoffset: 400; }
-    to { stroke-dashoffset: 0; stroke-dasharray: 400; }
-}
-
-@keyframes rgbFlow {
+@keyframes rgbStroke {
     0% { stroke: #ff0000; filter: drop-shadow(0 0 15px #ff0000); }
     33% { stroke: #00ff00; filter: drop-shadow(0 0 15px #00ff00); }
     66% { stroke: #0000ff; filter: drop-shadow(0 0 15px #0000ff); }
     100% { stroke: #ff0000; filter: drop-shadow(0 0 15px #ff0000); }
 }
 
+/* الاسم والزينة */
+.name-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards 2.5s;
+}
+
+.name-rgb {
+    font-size: 4.5rem;
+    margin: 0 15px;
+    animation: rgbText 6s linear infinite;
+    z-index: 11;
+}
+
+.deco-item {
+    font-size: 1.8rem;
+    animation: rgbText 6s linear infinite;
+}
+
+/* أنيميشن ألوان الاسم والزينة */
+@keyframes rgbText {
+    0% { color: #ff0000; text-shadow: 0 0 20px #ff0000; }
+    33% { color: #00ff00; text-shadow: 0 0 20px #00ff00; }
+    66% { color: #0000ff; text-shadow: 0 0 20px #0000ff; }
+    100% { color: #ff0000; text-shadow: 0 0 20px #ff0000; }
+}
+
+/* حركات إضافية */
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
 @keyframes fadeIn {
-    to { opacity: 1; transform: scale(1.1); }
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-#starsCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    to { opacity: 1; }
 }

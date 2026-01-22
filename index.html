@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فاطمة | Nano RGB</title>
+    <title>فاطمة | عالم النانو RGB</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="nano-container">
-        <!-- مسار القلب المختار -->
-        <svg viewBox="0 0 100 100" class="nano-svg">
-            <path id="nano-path" d="M50 88.9C25.5 74.2 8.5 56.5 8.5 35.5C8.5 22.8 18.2 12.5 31.5 12.5C39.2 12.5 45.9 16.1 50 21.6C54.1 16.1 60.8 12.5 68.5 12.5C81.8 12.5 91.5 22.8 91.5 35.5C91.5 56.5 74.5 74.2 50 88.9Z"></path>
-        </svg>
-
-        <!-- الاسم الذي سيصبح RGB -->
-        <h1 class="name">Fatima</h1>
+    <!-- الخلفية: القمر والنجوم -->
+    <div class="space-background">
+        <div class="moon"></div>
+        <div id="stars-container"></div>
     </div>
 
-    <canvas id="starsCanvas"></canvas>
+    <div class="main-scene">
+        <!-- القلب المرسوم -->
+        <svg viewBox="0 0 100 100" class="nano-heart-svg">
+            <path id="path-heart" d="M50 88.9C25.5 74.2 8.5 56.5 8.5 35.5C8.5 22.8 18.2 12.5 31.5 12.5C39.2 12.5 45.9 16.1 50 21.6C54.1 16.1 60.8 12.5 68.5 12.5C81.8 12.5 91.5 22.8 91.5 35.5C91.5 56.5 74.5 74.2 50 88.9Z"></path>
+        </svg>
+
+        <!-- حاوية الاسم مع الورود والقلوب -->
+        <div class="name-wrapper">
+            <span class="deco-item heart-mini-1"></span>
+            <span class="deco-item flower-mini-1"></span>
+            <h1 class="name-rgb">Fatima</h1>
+            <span class="deco-item flower-mini-2"></span>
+            <span class="deco-item heart-mini-2"></span>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
