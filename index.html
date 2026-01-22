@@ -1,40 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
+<html lang="en">
+
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سؤال لخليل</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <title>Glowing Flower Animation</title>
+    <link rel="stylesheet" href="./style.css">
 
-    <!-- شاشة السؤال -->
-    <div id="question-container">
-        <div class="glass-card">
-            <h1>هل تحبي خليل؟</h1>
-            <div class="btns">
-                <button id="yes-btn">نعم</button>
-                <button id="no-btn">لا</button>
-            </div>
-        </div>
+  </head>
+    
+  <body>
+  <div class="ground">
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
+        <div class="flower-container"></div>
     </div>
+    <script  src="./script.js"></script>
 
-    <!-- بستان الورود (يظهر عند نعم) -->
-    <div id="garden-overlay" class="hidden">
-        <div class="love-message">I LOVE YOUUU SO MUCH</div>
-        <div class="ground">
-            <!-- سيتم توليد الورود هنا بالكامل بواسطة JS -->
-        </div>
-    </div>
-
-    <!-- شاشة الرعب (تظهر عند لا) -->
-    <div id="scare-overlay" class="hidden">
-        <img src="https://media.tenor.com/EgJ6RLHG1hQAAAAM/spooky%27s-jumpscare-mansion-ringu-explosion.gif" alt="Scary">
-        <audio id="scare-sound">
-            <source src="https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=Scary+Scream&filename=mt/MTY4NDI1NDgxNjgzOTU2_7H_2f_2bY_2fC67U.mp3" type="audio/mpeg">
-        </audio>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+  </body>
+  
 </html>
