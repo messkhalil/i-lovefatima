@@ -1,28 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-
-  <head>
+<html lang="ar" dir="rtl">
+<head>
     <meta charset="UTF-8">
-    <title>Glowing Flower Animation</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فاطمة | عالم النانو المطور</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  </head>
-    
-  <body>
-  <div class="ground">
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
-        <div class="flower-container"></div>
+    <div class="moon"></div>
+    <div id="stars-container"></div>
+
+    <div class="container">
+        <div class="heart-wrapper">
+            <svg viewBox="0 0 100 100" class="main-svg">
+                <path id="path-border" d="M50 88.9C25.5 74.2 8.5 56.5 8.5 35.5C8.5 22.8 18.2 12.5 31.5 12.5C39.2 12.5 45.9 16.1 50 21.6C54.1 16.1 60.8 12.5 68.5 12.5C81.8 12.5 91.5 22.8 91.5 35.5C91.5 56.5 74.5 74.2 50 88.9Z"></path>
+                <path id="path-fill" d="M50 88.9C25.5 74.2 8.5 56.5 8.5 35.5C8.5 22.8 18.2 12.5 31.5 12.5C39.2 12.5 45.9 16.1 50 21.6C54.1 16.1 60.8 12.5 68.5 12.5C81.8 12.5 91.5 22.8 91.5 35.5C91.5 56.5 74.5 74.2 50 88.9Z"></path>
+            </svg>
+            
+            <div class="name-box">
+                <!-- ورود وقلوب بأنيميشن متحرك -->
+                <span class="flower f1">🌸</span>
+                <span class="flower f2">🌺</span>
+                <h1 class="name">فاطمة</h1>
+                <span class="heart-mini h1">❤️</span>
+                <span class="heart-mini h2">💖</span>
+            </div>
+        </div>
+
+       
     </div>
-    <script  src="./script.js"></script>
 
-  </body>
-  
+    <script src="script.js"></script>
+</body>
 </html>
